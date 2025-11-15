@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -16,10 +17,7 @@ function HomePage() {
         </p>
 
         <h1 className="text-5xl font-extrabold leading-tight">
-          Hola, soy{" "}
-          <span className="text-sky-400">
-            Edwin Crespo
-          </span>
+          Hola, soy <span className="text-sky-400">Edwin Crespo</span>
         </h1>
 
         <p className="text-lg text-slate-300 leading-relaxed">
@@ -33,22 +31,22 @@ function HomePage() {
           className="flex gap-4 pt-4 flex-wrap"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <a
-            href="/projects"
+          <Link
+            to="projects"
             className="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-900 font-semibold flex items-center gap-2 transition"
           >
             Ver proyectos
             <ArrowRight size={18} />
-          </a>
+          </Link>
 
-          <a
-            href="/contact"
+          <Link
+            to="contact"
             className="px-6 py-3 rounded-xl border border-sky-500 text-sky-400 hover:bg-slate-800 transition font-semibold"
           >
             Contactar
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
 
